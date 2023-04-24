@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 using R5T.T0132;
 
@@ -29,5 +31,18 @@ namespace R5T.F0034
 				F0000.ExecutableNames.Instance.Cmd,
 				arguments);
         }
-	}
+
+		public void OpenDirectoriesInExplorer(IEnumerable<string> directoryPaths)
+		{
+			foreach (var directoryPath in directoryPaths)
+			{
+				this.OpenDirectoryInExplorer(directoryPath);
+			}
+		}
+
+        public void OpenDirectoriesInExplorer(params string[] directoryPaths)
+        {
+			this.OpenDirectoriesInExplorer(directoryPaths.AsEnumerable());
+        }
+    }
 }
