@@ -15,6 +15,12 @@ namespace R5T.F0034
 
 
         /// <inheritdoc cref="Platform.IWindowsExplorerOperator.Open(string)"/>
+        public void Open(string directoryPath)
+        {
+            _Platform.Open(directoryPath);
+        }
+
+        /// <inheritdoc cref="Platform.IWindowsExplorerOperator.Open(string)"/>
         public void Open(IDirectoryPath directoryPath)
         {
             _Platform.Open(directoryPath.Value);
