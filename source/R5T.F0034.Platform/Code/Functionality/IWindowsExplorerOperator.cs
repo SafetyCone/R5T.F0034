@@ -31,7 +31,8 @@ namespace R5T.F0034.Platform
             /// * Use the start command (which is a command, not an executable), instead of explorer.exe.
             /// * Use quotes around the directory path to make sure it is treated as a single token when the directory path has a directory name with spaces.
             /// * Use the first blank quotes to make the start command ok with the directory path being quoted.
-            /// * Use the /B command to avoid creating a new window, bringing focus to the Explorer windown where the directory is already open. (Strangley, this only works when this command opened the window. If the window was opened "naturally" (not by this command), then a new window will still be created.)
+            /// * Use the /B command to avoid creating a new window, bringing focus to the Explorer windown where the directory is already open.
+            /// (Strangley, this only works when this command opened the window. If the window was opened "naturally" (not by this command), then a new window will still be created.)
             /// </remarks>
             var arguments = $"/c start /B \"\" \"{directoryPath}\"";
 
